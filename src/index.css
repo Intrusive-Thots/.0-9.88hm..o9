@@ -10,4 +10,43 @@ body {
   margin: 0;
   overflow: hidden;
   background-color: #020617;
+  /* Lock the digits in metrics, timers, and tables so they stop jittering as values change. */
+  font-variant-numeric: tabular-nums;
+}
+
+/* Browser surfaces: theme the parts the components don't draw so the dark console reads intentional. */
+
+/* Placeholder text at a readable contrast on slate-900 fields (slate-500 ~= 4.6:1). */
+::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+/* Keyboard focus ring in the app's single amber accent, on every focusable control. */
+:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Scrollbars tinted to the dark theme instead of the OS default light track. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #475569 transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #64748b;
 }
