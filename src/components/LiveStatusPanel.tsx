@@ -212,16 +212,18 @@ export const LiveStatusPanel: React.FC<LiveStatusPanelProps> = ({ config, onHost
             type="button"
             disabled={Boolean(busy) || Boolean(snapshot?.surveyRunning)}
             onClick={() => void runControl('survey-start', SURVEY_START_COMMAND)}
-            className="min-h-11 px-3 rounded-xl bg-slate-100 font-bold text-slate-950 disabled:opacity-50"
+            className="min-h-11 px-3 rounded-xl bg-amber-500 font-bold text-slate-950 inline-flex items-center gap-2 disabled:opacity-50"
           >
+            <Play className="w-4 h-4" />
             Start survey
           </button>
           <button
             type="button"
             disabled={Boolean(busy)}
             onClick={() => void runControl('survey-stop', SURVEY_STOP_COMMAND)}
-            className="min-h-11 px-3 rounded-xl border border-slate-700 text-slate-200 disabled:opacity-50"
+            className="min-h-11 px-3 rounded-xl border border-slate-700 text-slate-200 inline-flex items-center gap-2 disabled:opacity-50"
           >
+            <Square className="w-4 h-4" />
             Stop survey
           </button>
         </div>

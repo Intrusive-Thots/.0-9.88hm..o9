@@ -161,7 +161,7 @@ export const PayloadSidebarList: React.FC<PayloadSidebarListProps> = ({
           type="text"
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Search by title, description, notes..."
+          placeholder="Search payloads…"
           className="w-full min-h-11 bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-12 py-3 text-base text-slate-200 placeholder-slate-500 font-mono focus:outline-none focus:border-amber-500 transition-colors"
         />
         {searchTerm && (
@@ -224,11 +224,6 @@ export const PayloadSidebarList: React.FC<PayloadSidebarListProps> = ({
                     : 'bg-slate-950/60 hover:bg-slate-800/60 border-slate-800/80 hover:border-slate-700'
                 }`}
               >
-                {/* Active Indicator Accent Bar */}
-                {isSelected && (
-                  <div className="absolute left-0 top-2 bottom-2 w-1 bg-amber-400 rounded-r" />
-                )}
-
                 {/* Top Row: Title & Badges */}
                 <div className="flex items-start justify-between gap-1.5">
                   <div className="flex items-center space-x-1.5 min-w-0 flex-1">

@@ -261,7 +261,7 @@ export const AiAssistantModal: React.FC<AiAssistantModalProps> = ({
                       type="button"
                       disabled={!fixResult.command || Boolean(blocked)}
                       onClick={() => onRunSuggested(fixResult.command)}
-                      className="w-full min-h-11 rounded-xl bg-slate-100 text-slate-950 font-bold text-sm disabled:opacity-40"
+                      className="w-full min-h-11 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm disabled:opacity-40"
                     >
                       Run suggested fix
                     </button>
